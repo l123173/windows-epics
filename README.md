@@ -15,14 +15,23 @@
 
 
 但是mysy的操作有些不一样，例如：  
-更新msys2的软件列表：pacman -Sy
-查找相关软件：pacman -Ss vim
-然后执行安装命令：pacman -S vim
+更新msys2的软件列表：pacman -Sy  
+查找相关软件：pacman -Ss vim  
+然后执行安装命令：pacman -S vim  
 
 
 
 ------------------------------  
 ## 以下是2023年的操作  
-
-其实主要是解决ccl.obj（这个据说使用mingw的某个版本的时候有这个问题） 和cl.exe的问题
-windows里echo %path% 是查看环境变量
+### 不要用vs这种方法安装了  
+但还是简述以下vs安装的过程和坑
+其实主要是解决ccl.obj（这个据说使用mingw的某个版本的时候有这个问题） 和cl.exe的问题。  
+第一次好不容易成功以后，再make，居然又错了，实在不知道咋解决，放弃了。另外，用vs其实不如用mingw的方法好，mingw其实就是linux环境，那样比较好一些。  
+1) windows里echo %path% 是查看环境变量  
+2) vs 一定要安装c++ tools，还有桌面的那个
+3) gmake这个，其实直接下载一个exe，然后编辑环境变量就行了  
+4) 不需要使用choco，直接自己安装就行了
+5) bash 去掉最前面的echo off就是调试模式
+6) bash 里如果不认识中文，可以在最前面输入 chcp 65001  （好像，灵过，但是最后删掉了也能用）
+7) http://www.manongjc.com/detail/41-wkubvssdpavrzpr.html
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64 10.0.22621.0 -vcvars_ver=14.35
