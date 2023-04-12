@@ -9,8 +9,11 @@
 ### express的步骤 (若错误见下方)
 1) pacman -S re2c ,libreadline, libreadline-devel
 2) 修改所有的support，base地址等等（其实可以用make release 修改把？查查）
-3) 解压缩（也是make顺序）：iocStats，autosave，seq，sscan, calc(启用了seq，觉得不启用应该也可以)，alive，ipac，asyn，busy，std，areadetector,xspress
-4) 
+3) 解压缩（也是make顺序）：iocStats，autosave，seq，sscan, calc(启用了seq，觉得不启用应该也可以)，alive，ipac，asyn，busy，std，areadetector(下面详述),xspress
+4) areadetector下载adcore,adsupport,adview (没按网页说的下载sim，试试)，解压缩到areadetector，处理掉源文件  
+5)  
+
+
 
 错误：
 1) 
