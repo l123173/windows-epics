@@ -6,6 +6,18 @@
 3)  再/etc/profile 的140 行，添加export EPICS_HOST_ARCH；在52行，第一PATH（第二个PATH那里试过一次不行）那里添加bin目录（貌似：貌似添加到windows的也可以，不过没试过）
 4)  
 
+### express的步骤 (若错误见下方)
+1) pacman -S re2c ,libreadline, libreadline-devel
+2) 修改所有的support，base地址等等（其实可以用make release 修改把？查查）
+3) 解压缩（也是make顺序）：iocStats，autosave，seq，sscan, calc(启用了seq，觉得不启用应该也可以)，alive，ipac，asyn，busy，std，areadetector,xspress
+4) 
+
+错误：
+1) 
+2) seq 的错误collect2.exe: error: ld returned 1 exit status。 解决：发现就是example里的错误，没管它。后来证明确实不影响别的安装
+
+
+
 ### 一开始用网上的例子，用的是stabery（没有使用vs），错误了；
 后来有选择了vs2022（太大），结果里头没有vsxxx.bat，又新装了vs的工具，有了vsxxx.bat工具；
 其实用Chocolatey应该能解决，后面看到Chocolatey里有vs的c++ tool。
